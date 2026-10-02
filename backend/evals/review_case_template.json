@@ -1,0 +1,24 @@
+{
+  "id": "replace_with_case_id",
+  "description": "One labeled package for regression evaluation.",
+  "files": ["architectural.pdf", "structural.pdf", "stability_certificate.pdf"],
+  "authority": "DHA_Lahore",
+  "expected": {
+    "overall": "PENDING_HUMAN_REVIEW",
+    "document_types": {
+      "architectural": true,
+      "structural": true,
+      "stability_certificate": true
+    },
+    "checks": {
+      "site_plan": "PASS",
+      "structural_engineer_seal": "PENDING",
+      "stability_cert": "PASS"
+    },
+    "values": {
+      "front_setback_ft": 10.0,
+      "concrete_grade_psi": 3000.0
+    }
+  },
+  "review_notes": "Document the page and evidence text for every expected PASS, PENDING, and CORRECTION_REQUIRED result."
+}

@@ -1,0 +1,330 @@
+{
+  "_meta": {
+    "title": "Housing Society & Development Authority Residential Building Bylaws",
+    "country": "Pakistan",
+    "authorities": ["DHA (Defence Housing Authority)", "LDA (Lahore Development Authority)", "CDA (Capital Development Authority)", "Standard Punjab Model"],
+    "version": "2026.1",
+    "description": "Comprehensive residential plot bylaw configurations for automated architectural blueprint scrutiny and compliance checking.",
+    "units": {
+      "dimensions": "feet",
+      "coverage": "percentage",
+      "marla_definition": "225 sq ft in Lahore/LDA/DHA; 272.25 sq ft in standard revenue record"
+    }
+  },
+  "default_by_plot_size": {
+    "3_marla": {
+      "display_name": "3 Marla (Up to 675 - 750 sq ft)",
+      "plot_area_marla": 3.0,
+      "plot_area_sqft_range": [600, 750],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Front setback / clear open space" },
+        "rear_setback_ft": { "op": "min", "limit": 3.0, "unit": "ft", "description": "Rear setback / mandatory clear space" },
+        "left_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Left side setback (not mandatory for small plots)" },
+        "right_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Right side setback (not mandatory for small plots)" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max height from road crown (G+1+Mumty)" },
+        "ground_coverage_pct": { "op": "max", "limit": 80.0, "unit": "%", "description": "Max ground floor coverage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys (Ground + 1 Floor)" },
+        "plinth_height_ft": { "op": "min", "limit": 1.5, "unit": "ft", "description": "Minimum plinth level height above road" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 2.5, "unit": "ft", "description": "Max allowable sunshade/chajja projection" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 500,
+        "ohwt_min_gallons": 300,
+        "trees_required": 1,
+        "rainwater_harvesting": false
+      }
+    },
+    "5_marla": {
+      "display_name": "5 Marla (1125 - 1250 sq ft / ~25x45 or 25x50 ft)",
+      "plot_area_marla": 5.0,
+      "plot_area_sqft_range": [1125, 1360],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Front setback / clear open space" },
+        "rear_setback_ft": { "op": "min", "limit": 3.0, "unit": "ft", "description": "Rear setback / mandatory clear space (DHA: 3ft, LDA: 5ft)" },
+        "left_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Left side setback (not compulsory for standard 5M unless corner)" },
+        "right_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Right side setback (not compulsory for standard 5M unless corner)" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max height from road crown" },
+        "ground_coverage_pct": { "op": "max", "limit": 75.0, "unit": "%", "description": "Max ground floor coverage percentage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys (Ground + 1 Floor + Mumty)" },
+        "plinth_height_ft": { "op": "min", "limit": 1.5, "unit": "ft", "description": "Minimum plinth level height above road crown" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 3.0, "unit": "ft", "description": "Max chajja/sunshade projection in front" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 800,
+        "ohwt_min_gallons": 400,
+        "parking_bays_min": 1,
+        "trees_required": 1,
+        "rainwater_harvesting": true
+      }
+    },
+    "7_marla": {
+      "display_name": "7 Marla (~1575 sq ft / ~30x50 ft)",
+      "plot_area_marla": 7.0,
+      "plot_area_sqft_range": [1500, 1750],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 7.0, "unit": "ft", "description": "Front setback / clear open space" },
+        "rear_setback_ft": { "op": "min", "limit": 3.0, "unit": "ft", "description": "Rear setback / mandatory clear space" },
+        "left_setback_ft": { "op": "min", "limit": 3.0, "unit": "ft", "description": "Left side setback (DHA requires 3ft on one side)" },
+        "right_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Right side setback" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max height from road crown" },
+        "ground_coverage_pct": { "op": "max", "limit": 75.0, "unit": "%", "description": "Max ground floor coverage percentage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys (Ground + 1 Floor)" },
+        "plinth_height_ft": { "op": "min", "limit": 1.5, "unit": "ft", "description": "Minimum plinth level height" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 3.0, "unit": "ft", "description": "Max front projection/balcony" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 1000,
+        "ohwt_min_gallons": 500,
+        "parking_bays_min": 1,
+        "trees_required": 1,
+        "rainwater_harvesting": true
+      }
+    },
+    "8_marla": {
+      "display_name": "8 Marla (~1800 - 2000 sq ft / ~35x50 ft)",
+      "plot_area_marla": 8.0,
+      "plot_area_sqft_range": [1750, 2050],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 8.0, "unit": "ft", "description": "Front setback / clear open space" },
+        "rear_setback_ft": { "op": "min", "limit": 4.0, "unit": "ft", "description": "Rear setback / mandatory clear space" },
+        "left_setback_ft": { "op": "min", "limit": 4.0, "unit": "ft", "description": "Left side setback (DHA standard: 4ft)" },
+        "right_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Right side setback" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max height from road crown" },
+        "ground_coverage_pct": { "op": "max", "limit": 75.0, "unit": "%", "description": "Max ground floor coverage percentage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys" },
+        "plinth_height_ft": { "op": "min", "limit": 1.5, "unit": "ft", "description": "Minimum plinth level height" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 3.0, "unit": "ft", "description": "Max front projection" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 1000,
+        "ohwt_min_gallons": 500,
+        "parking_bays_min": 1,
+        "trees_required": 2,
+        "rainwater_harvesting": true
+      }
+    },
+    "10_marla": {
+      "display_name": "10 Marla (2250 - 2500 sq ft / ~35x65 ft)",
+      "plot_area_marla": 10.0,
+      "plot_area_sqft_range": [2200, 2600],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 10.0, "unit": "ft", "description": "Front setback (DHA: 10'-9\", LDA: 10ft)" },
+        "rear_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Rear setback (DHA: 5'-4.5\", LDA: 7ft)" },
+        "left_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Left side setback (compulsory for 10 Marla)" },
+        "right_setback_ft": { "op": "min", "limit": 0.0, "unit": "ft", "description": "Right side setback (0ft unless corner or both-sides required)" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max overall height from road crown" },
+        "ground_coverage_pct": { "op": "max", "limit": 70.0, "unit": "%", "description": "Max ground floor coverage percentage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys (Ground + 1 Floor)" },
+        "plinth_height_ft": { "op": "min", "limit": 1.5, "unit": "ft", "description": "Minimum plinth level height" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 3.0, "unit": "ft", "description": "Max front projection/chajja" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 1200,
+        "ohwt_min_gallons": 600,
+        "parking_bays_min": 2,
+        "trees_required": 2,
+        "rainwater_harvesting": true
+      }
+    },
+    "1_kanal": {
+      "display_name": "1 Kanal (20 Marla / 4500 - 5000 sq ft / ~50x90 ft)",
+      "plot_area_marla": 20.0,
+      "plot_area_sqft_range": [4500, 5445],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 15.0, "unit": "ft", "description": "Front setback (DHA: 15'-9\", LDA: 15ft)" },
+        "rear_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Rear setback (DHA: 5'-4.5\", LDA: 7ft)" },
+        "left_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Left side setback (compulsory both sides for 1 Kanal)" },
+        "right_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Right side setback (compulsory both sides for 1 Kanal)" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max height from road crown (DHA: 35ft, LDA: 38ft)" },
+        "ground_coverage_pct": { "op": "max", "limit": 65.0, "unit": "%", "description": "Max ground floor coverage percentage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys (Ground + 1 Floor + Basement permitted)" },
+        "plinth_height_ft": { "op": "min", "limit": 2.0, "unit": "ft", "description": "Minimum plinth level height" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 3.0, "unit": "ft", "description": "Max front projection/canopy" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 2000,
+        "ohwt_min_gallons": 1000,
+        "parking_bays_min": 2,
+        "trees_required": 3,
+        "rainwater_harvesting": true,
+        "septic_tank_required": true
+      }
+    },
+    "2_kanal": {
+      "display_name": "2 Kanal (40 Marla / 9000 - 10000 sq ft / ~75x120 or 100x90 ft)",
+      "plot_area_marla": 40.0,
+      "plot_area_sqft_range": [9000, 10890],
+      "rules": {
+        "front_setback_ft": { "op": "min", "limit": 20.0, "unit": "ft", "description": "Front setback (DHA: 15'-9\" to 20'-9\", LDA: 20ft)" },
+        "rear_setback_ft": { "op": "min", "limit": 8.0, "unit": "ft", "description": "Rear setback (DHA: 8'-4.5\", LDA: 13ft)" },
+        "left_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Left side setback (both sides compulsory, LDA: 13ft)" },
+        "right_setback_ft": { "op": "min", "limit": 5.0, "unit": "ft", "description": "Right side setback (both sides compulsory, LDA: 13ft)" },
+        "total_height_ft": { "op": "max", "limit": 35.0, "unit": "ft", "description": "Max height from road crown" },
+        "ground_coverage_pct": { "op": "max", "limit": 55.0, "unit": "%", "description": "Max ground floor coverage percentage" },
+        "storeys": { "op": "max", "limit": 2, "unit": "floors", "description": "Max storeys (Ground + 1 Floor + Basement permitted)" },
+        "plinth_height_ft": { "op": "min", "limit": 2.0, "unit": "ft", "description": "Minimum plinth level height" },
+        "boundary_wall_height_ft": { "op": "max", "limit": 7.0, "unit": "ft", "description": "Max boundary wall height" },
+        "projection_ft": { "op": "max", "limit": 3.0, "unit": "ft", "description": "Max front projection" }
+      },
+      "requirements": {
+        "ugwt_min_gallons": 3000,
+        "ohwt_min_gallons": 1500,
+        "parking_bays_min": 3,
+        "trees_required": 4,
+        "rainwater_harvesting": true,
+        "septic_tank_required": true
+      }
+    }
+  },
+  "authorities_specific": {
+    "DHA_Lahore": {
+      "authority_name": "Defence Housing Authority Lahore (Construction & Development Regulations)",
+      "phases": "Phase 1 through Phase 13",
+      "plots": {
+        "5_marla": {
+          "front_setback_ft": ["min", 5.0],
+          "rear_setback_ft": ["min", 3.0],
+          "left_setback_ft": ["min", 3.0],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 35.0],
+          "ground_coverage_pct": ["max", 75.0],
+          "storeys": ["max", 2],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "7_marla": {
+          "front_setback_ft": ["min", 7.0],
+          "rear_setback_ft": ["min", 3.0],
+          "left_setback_ft": ["min", 3.0],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 35.0],
+          "ground_coverage_pct": ["max", 75.0],
+          "storeys": ["max", 2],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "8_marla": {
+          "front_setback_ft": ["min", 8.0],
+          "rear_setback_ft": ["min", 4.0],
+          "left_setback_ft": ["min", 4.0],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 35.0],
+          "ground_coverage_pct": ["max", 75.0],
+          "storeys": ["max", 2],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "10_marla": {
+          "front_setback_ft": ["min", 10.75],
+          "rear_setback_ft": ["min", 5.375],
+          "left_setback_ft": ["min", 5.375],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 35.0],
+          "ground_coverage_pct": ["max", 70.0],
+          "storeys": ["max", 2],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "1_kanal": {
+          "front_setback_ft": ["min", 15.75],
+          "rear_setback_ft": ["min", 5.375],
+          "left_setback_ft": ["min", 5.375],
+          "right_setback_ft": ["min", 5.375],
+          "total_height_ft": ["max", 35.0],
+          "ground_coverage_pct": ["max", 65.0],
+          "storeys": ["max", 2],
+          "plinth_height_ft": ["min", 2.0],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "2_kanal": {
+          "front_setback_ft": ["min", 20.75],
+          "rear_setback_ft": ["min", 8.375],
+          "left_setback_ft": ["min", 5.375],
+          "right_setback_ft": ["min", 5.375],
+          "total_height_ft": ["max", 35.0],
+          "ground_coverage_pct": ["max", 55.0],
+          "storeys": ["max", 2],
+          "plinth_height_ft": ["min", 2.0],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        }
+      }
+    },
+    "LDA_Lahore": {
+      "authority_name": "Lahore Development Authority Building & Zoning Regulations",
+      "plots": {
+        "under_5_marla": {
+          "front_setback_ft": ["min", 5.0],
+          "rear_setback_ft": ["min", 5.0],
+          "left_setback_ft": ["min", 0.0],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 38.0],
+          "ground_coverage_pct": ["max", 80.0],
+          "storeys": ["max", 3],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "5_to_10_marla": {
+          "front_setback_ft": ["min", 5.0],
+          "rear_setback_ft": ["min", 5.0],
+          "left_setback_ft": ["min", 0.0],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 38.0],
+          "ground_coverage_pct": ["max", 75.0],
+          "storeys": ["max", 3],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "10_marla_to_1_kanal": {
+          "front_setback_ft": ["min", 10.0],
+          "rear_setback_ft": ["min", 7.0],
+          "left_setback_ft": ["min", 5.0],
+          "right_setback_ft": ["min", 0.0],
+          "total_height_ft": ["max", 38.0],
+          "ground_coverage_pct": ["max", 70.0],
+          "storeys": ["max", 3],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "1_kanal_to_30_marla": {
+          "front_setback_ft": ["min", 15.0],
+          "rear_setback_ft": ["min", 7.0],
+          "left_setback_ft": ["min", 5.0],
+          "right_setback_ft": ["min", 5.0],
+          "total_height_ft": ["max", 38.0],
+          "ground_coverage_pct": ["max", 65.0],
+          "storeys": ["max", 3],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        },
+        "2_kanal_and_above": {
+          "front_setback_ft": ["min", 20.0],
+          "rear_setback_ft": ["min", 13.0],
+          "left_setback_ft": ["min", 13.0],
+          "right_setback_ft": ["min", 13.0],
+          "total_height_ft": ["max", 38.0],
+          "ground_coverage_pct": ["max", 55.0],
+          "storeys": ["max", 3],
+          "plinth_height_ft": ["min", 1.5],
+          "boundary_wall_height_ft": ["max", 7.0],
+          "projection_ft": ["max", 3.0]
+        }
+      }
+    }
+  }
+}

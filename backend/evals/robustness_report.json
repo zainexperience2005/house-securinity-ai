@@ -1,0 +1,76 @@
+{
+  "timestamp": 1790672735.8792965,
+  "total_conditions_tested": 7,
+  "robustness_results": [
+    {
+      "condition": "clean_baseline",
+      "description": "Baseline Clean PDF",
+      "elapsed_seconds": 36.33,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": 3000.0,
+      "slab_thickness_extracted": 6.0,
+      "passed": true
+    },
+    {
+      "condition": "rotation_90",
+      "description": "90-Degree Rotation Shift",
+      "elapsed_seconds": 64.4,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": null,
+      "slab_thickness_extracted": null,
+      "passed": true
+    },
+    {
+      "condition": "rotation_180",
+      "description": "180-Degree Inverted Orientation",
+      "elapsed_seconds": 85.76,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": null,
+      "slab_thickness_extracted": null,
+      "passed": true
+    },
+    {
+      "condition": "rotation_270",
+      "description": "270-Degree Counter-Clockwise Rotation",
+      "elapsed_seconds": 84.09,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": null,
+      "slab_thickness_extracted": null,
+      "passed": true
+    },
+    {
+      "condition": "low_dpi_scan",
+      "description": "Low-DPI Fax/Scanned Compression (100 DPI)",
+      "elapsed_seconds": 84.52,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": null,
+      "slab_thickness_extracted": null,
+      "passed": true
+    },
+    {
+      "condition": "heavy_noise_grain",
+      "description": "High-Contrast Photocopy Noise & Blur",
+      "elapsed_seconds": 97.72,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": null,
+      "slab_thickness_extracted": null,
+      "passed": true
+    },
+    {
+      "condition": "faded_blueprint",
+      "description": "Faded Blueprint / Low-Contrast Washout",
+      "elapsed_seconds": 97.8,
+      "overall_verdict": "CORRECTION_REQUIRED",
+      "safety_guardrail_intact": true,
+      "concrete_psi_extracted": null,
+      "slab_thickness_extracted": null,
+      "passed": true
+    }
+  ]
+}

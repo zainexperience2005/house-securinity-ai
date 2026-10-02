@@ -1,0 +1,167 @@
+[
+  {
+    "id": "case_01_93b_ground_floor_slab",
+    "pdf_name": "93-B OPF GROUND FLOOR SLAB STR DWG.pdf",
+    "authority": "OPF_Islamabad",
+    "input_query": "Scrutinize the drawing package for structural engineering compliance, concrete specifications, slab thickness, and required schedules.",
+    "expected_doc_type": "structural_drawing",
+    "expected_outputs": {
+      "overall": "CORRECTION_REQUIRED",
+      "concrete_grade_psi": 3000.0,
+      "slab_thickness_in": 6.0,
+      "beam_schedule_present": 1.0,
+      "slab_rebar_detail_present": 1.0,
+      "structural_notes_present": 1.0,
+      "has_stability_certificate": false,
+      "completeness_status": "INCOMPLETE"
+    },
+    "golden_context": [
+      "Page 1 note: 'ALL SLABS SHALL BE 6\" THICK UNLESS OTHERWISE SPECIFIED'",
+      "Page 1 contains: MEZZANINE FLOOR SLAB BOTTOM REINFORCEMENT DETAILS",
+      "Page 2 header: 'SCHEDULE OF BEAMS & REINFORCEMENT DETAILS (3000 Psi)'",
+      "Page 1-4: Structural drawing sheets detailing slab reinforcement, beam cross sections, and structural general notes.",
+      "Submission lacks Architectural Site/Floor Plan and Structural Stability Certificate."
+    ]
+  },
+  {
+    "id": "case_02_93b_mezzanine_slab",
+    "pdf_name": "93-B_OPF_MEZZANINE_FLOOR_SLAB_STR_DWG.pdf",
+    "authority": "OPF_Islamabad",
+    "input_query": "Audit the mezzanine slab engineering drawing for rebar schedule, steel grade, concrete strength, and completeness.",
+    "expected_doc_type": "structural_drawing",
+    "expected_outputs": {
+      "overall": "CORRECTION_REQUIRED",
+      "concrete_grade_psi": 3000.0,
+      "steel_grade_psi": 40000.0,
+      "slab_thickness_in": 6.0,
+      "has_stability_certificate": false,
+      "completeness_status": "INCOMPLETE"
+    },
+    "golden_context": [
+      "Drawing specifies 3000 Psi concrete compressive strength on beam schedule.",
+      "Steel reinforcement specified as Grade 40 (40,000 psi).",
+      "Slab thickness specified at 6 inches across typical floor spans.",
+      "Drawing set contains structural mezzanine drawings but lacks companion architectural sheets."
+    ]
+  },
+  {
+    "id": "case_03_94a_ground_floor_slab",
+    "pdf_name": "94-A_OPF_GROUND_FLOOR_SLAB_STR_DWG.pdf",
+    "authority": "OPF_Islamabad",
+    "input_query": "Perform regulatory and structural audit on the Ground Floor Slab drawing for Plot 94-A OPF.",
+    "expected_doc_type": "structural_drawing",
+    "expected_outputs": {
+      "overall": "CORRECTION_REQUIRED",
+      "concrete_grade_psi": 3000.0,
+      "slab_thickness_in": 6.0,
+      "has_stability_certificate": false,
+      "completeness_status": "INCOMPLETE"
+    },
+    "golden_context": [
+      "Concrete compressive strength specified as 3000 PSI on beam schedule.",
+      "Standard slab thickness designated as 6 inches.",
+      "Structural floor slab details present for Plot 94-A.",
+      "Package is missing municipal architectural submission sheets."
+    ]
+  },
+  {
+    "id": "case_04_95c_first_floor_slab",
+    "pdf_name": "95-C_OPF_FIRST_FLOOR_SLAB_STR_DWG.pdf",
+    "authority": "OPF_Islamabad",
+    "input_query": "Evaluate structural drawing submission for Plot 95-C First Floor Slab engineering specifications.",
+    "expected_doc_type": "structural_drawing",
+    "expected_outputs": {
+      "overall": "CORRECTION_REQUIRED",
+      "concrete_grade_psi": 4000.0,
+      "slab_thickness_in": 8.0,
+      "has_stability_certificate": false,
+      "completeness_status": "INCOMPLETE"
+    },
+    "golden_context": [
+      "Upper floor heavy slab drawing specifies concrete strength of 4000 PSI.",
+      "Slab depth designated as 8 inches (8.0\").",
+      "Beam schedules and reinforcement layouts detailed across sheets 1-4."
+    ]
+  },
+  {
+    "id": "case_05_dha_lahore_1kanal_setback_violation",
+    "pdf_name": "SYNTH_DHA_LAHORE_1KANAL_VIOLATION.pdf",
+    "authority": "DHA_Lahore",
+    "input_query": "Audit 1 Kanal residential submission in DHA Lahore Phase 6 for setback bylaws and structural stability certification.",
+    "expected_doc_type": "architectural_drawing",
+    "expected_outputs": {
+      "overall": "CORRECTION_REQUIRED",
+      "plot_area_marla": 20.0,
+      "front_setback_ft": 10.0,
+      "rear_setback_ft": 7.0,
+      "has_stability_certificate": false,
+      "completeness_status": "PARTIALLY_COMPLETE"
+    },
+    "golden_context": [
+      "Plot dimensions: 50' x 90' (20 Marla / 1 Kanal) in DHA Lahore Phase 6.",
+      "Front setback marked as 10'-0\" (DHA Lahore 1 Kanal minimum rule requires 15'-0\"). VIOLATION flagged.",
+      "Rear setback marked as 7'-0\" (DHA Lahore 1 Kanal minimum rule requires 7'-0\"). OK.",
+      "Architectural drawings submitted; Structural Stability Certificate is missing."
+    ]
+  },
+  {
+    "id": "case_06_cda_islamabad_complete_submission",
+    "pdf_name": "SYNTH_CDA_G11_COMPLETE_PACKAGE.pdf",
+    "authority": "CDA_Islamabad",
+    "input_query": "Perform comprehensive regulatory and structural compliance audit on complete submission package for Plot in CDA Sector G-11.",
+    "expected_doc_type": "composite_package",
+    "expected_outputs": {
+      "overall": "READY_FOR_HUMAN_SIGNOFF",
+      "concrete_grade_psi": 3000.0,
+      "slab_thickness_in": 6.0,
+      "has_stability_certificate": true,
+      "completeness_status": "COMPLETE"
+    },
+    "golden_context": [
+      "CDA Sector G-11 package includes: Architectural Site Plan, Ground & First Floor Plans, Sections & Elevations.",
+      "Structural Engineering drawings Sheet S-01 through S-04 include foundation schedules, 3000 PSI concrete note, 6\" slabs.",
+      "Structural Stability Certificate submitted with valid PEC Civil/Struct registration (PEC-CIVIL-38192) signed and stamped.",
+      "All statutory municipal components submitted; package is 100% complete."
+    ]
+  },
+  {
+    "id": "case_07_lda_commercial_height_violation",
+    "pdf_name": "SYNTH_LDA_COMMERCIAL_HEIGHT_VIOLATION.pdf",
+    "authority": "LDA_Lahore",
+    "input_query": "Audit LDA commercial building proposal for permissible height limits, FAR, and column schedules.",
+    "expected_doc_type": "composite_package",
+    "expected_outputs": {
+      "overall": "CORRECTION_REQUIRED",
+      "building_height_ft": 48.0,
+      "has_stability_certificate": true,
+      "completeness_status": "COMPLETE"
+    },
+    "golden_context": [
+      "LDA Commercial Plaza drawing shows total proposed height of 48'-0\".",
+      "LDA standard commercial height limit for this road width category is 38'-0\". VIOLATION: Height exceeded by 10 ft.",
+      "Structural schedules and PEC stability certificate are present and legible."
+    ]
+  },
+  {
+    "id": "case_08_bahria_town_10marla_corner_compliant",
+    "pdf_name": "SYNTH_BAHRIA_10MARLA_CORNER.pdf",
+    "authority": "Bahria_Town",
+    "input_query": "Audit 10 Marla Corner Plot residential submission in Bahria Town Sector C for dual-road setbacks and structural specifications.",
+    "expected_doc_type": "composite_package",
+    "expected_outputs": {
+      "overall": "READY_FOR_HUMAN_SIGNOFF",
+      "plot_area_marla": 10.0,
+      "front_setback_ft": 10.0,
+      "concrete_grade_psi": 3000.0,
+      "slab_thickness_in": 6.0,
+      "has_stability_certificate": true,
+      "completeness_status": "COMPLETE"
+    },
+    "golden_context": [
+      "Bahria Town 10 Marla Corner Plot (35' x 65'). Front setback provided: 10'-0\", Side street setback: 5'-0\".",
+      "Corner chamfer of 5'-0\" provided per corner plot regulations.",
+      "Structural slab 6\" thick, 3000 PSI compressive strength.",
+      "Complete set with signed Stability Certificate."
+    ]
+  }
+]

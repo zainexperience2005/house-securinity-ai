@@ -1,0 +1,48 @@
+# Environment variables & secrets
+.env
+.env.*
+*.env
+
+# Python virtual environment & cache
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Antigravity & Agent cache
+.agents/
+
+# Eval stress test temp artifacts
+evals/stress_artifacts/
+
+# Temporary run artifacts
+*_verdict.json
+*_result.pdf
+*_report.pdf
+
+# Local review submissions and decisions (contain customer drawing data)
+data/review_cases/
+backend/data/review_cases/
+**/data/review_cases/
+*.sqlite
+*.sqlite3
+*.db
+
+# Node & Next.js frontend
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
